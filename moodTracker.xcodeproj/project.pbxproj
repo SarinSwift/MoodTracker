@@ -15,6 +15,8 @@
 		04CA51BE2194EEF200D1144D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CA51BC2194EEF200D1144D /* LaunchScreen.storyboard */; };
 		04CA51C92194EF6400D1144D /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA51C82194EF6400D1144D /* MoodEntry.swift */; };
 		04CA51CB2194FB6000D1144D /* MoodEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA51CA2194FB6000D1144D /* MoodEntryTableViewCell.swift */; };
+		04DDE01321AE335100D43B1A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DDE01221AE335100D43B1A /* CalendarViewController.swift */; };
+		04DDE01621AE3CDA00D43B1A /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DDE01521AE3CDA00D43B1A /* Date+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		04CA51BF2194EEF200D1144D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04CA51C82194EF6400D1144D /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
 		04CA51CA2194FB6000D1144D /* MoodEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryTableViewCell.swift; sourceTree = "<group>"; };
+		04DDE01221AE335100D43B1A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		04DDE01521AE3CDA00D43B1A /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			children = (
 				04CA51B32194EEF100D1144D /* AppDelegate.swift */,
 				04CA51C72194EF3B00D1144D /* models */,
+				04DDE01421AE3CC500D43B1A /* Extensions */,
 				04CA51C52194EF0D00D1144D /* controllers */,
 				04CA51C62194EF1800D1144D /* storyboards */,
 				04CA51BA2194EEF200D1144D /* Assets.xcassets */,
@@ -76,6 +81,7 @@
 				04CA51B52194EEF100D1144D /* ViewController.swift */,
 				04CA51CA2194FB6000D1144D /* MoodEntryTableViewCell.swift */,
 				0455C642219B902100264F9C /* MoodDetailedViewController.swift */,
+				04DDE01221AE335100D43B1A /* CalendarViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -95,6 +101,14 @@
 				04CA51C82194EF6400D1144D /* MoodEntry.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		04DDE01421AE3CC500D43B1A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04DDE01521AE3CDA00D43B1A /* Date+String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +182,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DDE01621AE3CDA00D43B1A /* Date+String.swift in Sources */,
+				04DDE01321AE335100D43B1A /* CalendarViewController.swift in Sources */,
 				04CA51B62194EEF100D1144D /* ViewController.swift in Sources */,
 				0455C643219B902100264F9C /* MoodDetailedViewController.swift in Sources */,
 				04CA51B42194EEF100D1144D /* AppDelegate.swift in Sources */,
