@@ -53,6 +53,7 @@ class MoodDetailedViewController: UIViewController {
     
     @IBAction func pressSave(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "unwind from save", sender: nil)
+        isEditingEntry = true
     }
     
     @IBAction func datePickerDidChangeValue(_ sender: UIDatePicker) {

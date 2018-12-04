@@ -82,6 +82,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="TRl-1z-Qtl">
+                        <barButtonItem key="leftBarButtonItem" title="Calendar" id="TDb-4z-95l">
+                            <connections>
+                                <action selector="pressCalendar:" destination="BYZ-38-t0r" id="lje-yU-DAU"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="s0v-R6-m7k">
                             <connections>
                                 <segue destination="yAv-jS-Nki" kind="show" identifier="show new entry" id="J11-b1-3DG"/>
@@ -95,6 +100,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="27.436281859070466"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="gO1-Ev-bmD">
+            <objects>
+                <viewController storyboardIdentifier="calendar vc" id="eKd-NX-qUu" customClass="CalendarViewController" customModule="moodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oKu-ca-8oi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DX6-hy-2m7">
+                                <rect key="frame" x="169" y="318.5" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="pressDone:" destination="eKd-NX-qUu" eventType="touchUpInside" id="6of-nA-efU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DX6-hy-2m7" firstAttribute="centerY" secondItem="oKu-ca-8oi" secondAttribute="centerY" id="Pzn-Ik-vwd"/>
+                            <constraint firstItem="DX6-hy-2m7" firstAttribute="centerX" secondItem="oKu-ca-8oi" secondAttribute="centerX" id="dBM-DU-Tnx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xAe-ls-iDb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1lW-bq-6wH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="538" y="740"/>
         </scene>
         <!--Details-->
         <scene sceneID="oFf-6J-euB">
@@ -147,6 +180,9 @@
                                                 <state key="normal" title="Good">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressMood:" destination="yAv-jS-Nki" eventType="touchUpInside" id="aS2-i5-K7I"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfb-eK-GxE">
                                                 <rect key="frame" x="0.0" y="89.5" width="343" height="37"/>
@@ -154,6 +190,9 @@
                                                 <state key="normal" title="Neutral">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressMood:" destination="yAv-jS-Nki" eventType="touchUpInside" id="LAw-Z1-xY4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmX-T9-xKJ">
                                                 <rect key="frame" x="0.0" y="134.5" width="343" height="36.5"/>
@@ -161,6 +200,9 @@
                                                 <state key="normal" title="Bad">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressMood:" destination="yAv-jS-Nki" eventType="touchUpInside" id="8Y9-ws-i9W"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwX-QH-UdF">
                                                 <rect key="frame" x="0.0" y="179" width="343" height="37"/>
@@ -168,6 +210,9 @@
                                                 <state key="normal" title="Terrible">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressMood:" destination="yAv-jS-Nki" eventType="touchUpInside" id="Q9e-nA-gRU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

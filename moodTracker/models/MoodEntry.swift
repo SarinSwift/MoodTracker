@@ -42,18 +42,17 @@ struct MoodEntry {
             case .none:
                 return .clear
             case .amazing:
-                return .green
+                return . green
             case .good:
                 return .blue
             case .neutral:
                 return .gray
-            case .bad:
-                return .orange
             case .terrible:
                 return .red
+            case .bad:
+                return .orange
             }
         }
-    
     }
 
 }
