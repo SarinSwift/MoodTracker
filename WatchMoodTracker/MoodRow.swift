@@ -26,7 +26,14 @@ class MoodRow: NSObject {
         
         entries = [goodEntry, badEntry, neutralEntry, amazingEntry, terribleEnrty]
         table.setNumberOfRows(entries.count, withRowType: "moodRow")
+        
+        for index in 0..<entries.count {
+            guard let controller = table.rowController(at: index) as? MoodRow else { continue }
+            controller.moodObj = entries[index]
+        }
     }
+    
+    
     
     var moodObj: MoodEntry? {
         didSet {
