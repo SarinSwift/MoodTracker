@@ -15,8 +15,9 @@
 		04B8117221B746E00014DE8F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8117121B746E00014DE8F /* ExtensionDelegate.swift */; };
 		04B8117421B746E10014DE8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B8117321B746E10014DE8F /* Assets.xcassets */; };
 		04B8117821B746E10014DE8F /* WatchMoodTracker.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 04B8115E21B746DF0014DE8F /* WatchMoodTracker.app */; };
-		04B8118221B74BB00014DE8F /* MoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8118121B74BB00014DE8F /* MoodRow.swift */; };
 		04B8118521B9D18C0014DE8F /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA51C82194EF6400D1144D /* MoodEntry.swift */; };
+		04B8118821B9D9A30014DE8F /* MoodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8118721B9D9A30014DE8F /* MoodController.swift */; };
+		04BF72C921BA057900E627D0 /* MoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF72C821BA057900E627D0 /* MoodRow.swift */; };
 		04CA51B42194EEF100D1144D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA51B32194EEF100D1144D /* AppDelegate.swift */; };
 		04CA51B62194EEF100D1144D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA51B52194EEF100D1144D /* ViewController.swift */; };
 		04CA51B92194EEF100D1144D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CA51B72194EEF100D1144D /* Main.storyboard */; };
@@ -81,7 +82,8 @@
 		04B8117121B746E00014DE8F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		04B8117321B746E10014DE8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B8117521B746E10014DE8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04B8118121B74BB00014DE8F /* MoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRow.swift; sourceTree = "<group>"; };
+		04B8118721B9D9A30014DE8F /* MoodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodController.swift; sourceTree = "<group>"; };
+		04BF72C821BA057900E627D0 /* MoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRow.swift; sourceTree = "<group>"; };
 		04CA51B02194EEF100D1144D /* moodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CA51B32194EEF100D1144D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CA51B52194EEF100D1144D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				04B8116021B746DF0014DE8F /* Interface.storyboard */,
-				04B8118121B74BB00014DE8F /* MoodRow.swift */,
 				04B8116321B746E00014DE8F /* Assets.xcassets */,
 				04B8116521B746E00014DE8F /* Info.plist */,
 			);
@@ -127,10 +128,12 @@
 		04B8116E21B746E00014DE8F /* WatchMoodTracker Extension */ = {
 			isa = PBXGroup;
 			children = (
-				04B8116F21B746E00014DE8F /* InterfaceController.swift */,
 				04B8117121B746E00014DE8F /* ExtensionDelegate.swift */,
+				04B8116F21B746E00014DE8F /* InterfaceController.swift */,
+				04B8118721B9D9A30014DE8F /* MoodController.swift */,
 				04B8117321B746E10014DE8F /* Assets.xcassets */,
 				04B8117521B746E10014DE8F /* Info.plist */,
+				04BF72C821BA057900E627D0 /* MoodRow.swift */,
 			);
 			path = "WatchMoodTracker Extension";
 			sourceTree = "<group>";
@@ -340,6 +343,8 @@
 				04B8117221B746E00014DE8F /* ExtensionDelegate.swift in Sources */,
 				04B8117021B746E00014DE8F /* InterfaceController.swift in Sources */,
 				04B8118521B9D18C0014DE8F /* MoodEntry.swift in Sources */,
+				04BF72C921BA057900E627D0 /* MoodRow.swift in Sources */,
+				04B8118821B9D9A30014DE8F /* MoodController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +359,6 @@
 				04CA51B42194EEF100D1144D /* AppDelegate.swift in Sources */,
 				04CA51C92194EF6400D1144D /* MoodEntry.swift in Sources */,
 				04CA51CB2194FB6000D1144D /* MoodEntryTableViewCell.swift in Sources */,
-				04B8118221B74BB00014DE8F /* MoodRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

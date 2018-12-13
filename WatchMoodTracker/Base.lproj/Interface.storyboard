@@ -23,29 +23,31 @@
             </objects>
             <point key="canvasLocation" x="-49" y="37"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Mood Controller-->
         <scene sceneID="Tst-c6-m4u">
             <objects>
-                <controller id="Bvk-OQ-fHL">
+                <controller id="Bvk-OQ-fHL" customClass="MoodController" customModule="WatchMoodTracker_Extension">
                     <items>
                         <table alignment="left" id="fx5-Nc-TsH">
                             <items>
-                                <tableRow identifier="moodRow" id="Da5-av-rCh" customClass="MoodRow" customModule="moodTracker">
+                                <tableRow identifier="moodRow" id="Da5-av-rCh" customClass="MoodRow" customModule="WatchMoodTracker_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="US8-A0-1Sz">
                                         <items>
-                                            <imageView width="37" height="1" alignment="left" id="L6r-zV-9NR"/>
+                                            <imageView width="37" height="1" alignment="left" verticalAlignment="center" contentMode="scaleAspectFit" id="L6r-zV-9NR"/>
                                             <label width="1" height="1" alignment="left" text="Label" id="QKz-nE-NVD"/>
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="moodImg" destination="L6r-zV-9NR" id="Vp5-I4-mvc"/>
-                                        <outlet property="moodLabel" destination="QKz-nE-NVD" id="Oi4-rC-SiI"/>
-                                        <outlet property="table" destination="fx5-Nc-TsH" id="QTi-rP-J7b"/>
+                                        <outlet property="moodImg" destination="L6r-zV-9NR" id="vSN-jC-z3f"/>
+                                        <outlet property="moodLabel" destination="QKz-nE-NVD" id="kaK-Xu-sUV"/>
                                     </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="fx5-Nc-TsH" id="6fM-J2-fve"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="271" y="37"/>

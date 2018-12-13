@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, WCSessionDelegate {
     
     var cellId = "mood entry cell"
     var entries: [MoodEntry] = []
@@ -29,6 +29,56 @@ class ViewController: UIViewController {
         
         entries = [goodEntry, badEntry, nuetralEntry]
         tableView.reloadData()
+        
+        if WCSession.isSupported(){
+            WCSession.default.delegate = self
+            WCSession.default.activate()
+        }
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        if error != nil {
+            print("Error: \(error)")
+        }else{
+            print("Ready to communicate with apple watch.")
+        }
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("Inactive")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        print("Deactivated")
+        WCSession.default.activate()
+    }
+    
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        DispatchQueue.main.async {
+            print("This is the user info \(userInfo)")
+            
+            guard let mood = userInfo["mood"] as? String, let date =  userInfo["date"] as? Date else{ return}
+            let newEntry : MoodEntry!
+            
+            switch mood {
+            case "Amazing":
+                newEntry = MoodEntry(mood: .amazing, date: date)
+            case "Good":
+                newEntry = MoodEntry(mood: .good, date: date)
+            case "Bad":
+                newEntry = MoodEntry(mood: .bad, date: date)
+            case "Terrible":
+                newEntry = MoodEntry(mood: .terrible, date: date)
+            case "Neutral":
+                newEntry = MoodEntry(mood: .neutral, date: date)
+            default:
+                return
+            }
+            
+            self.entries.append(newEntry)
+            self.tableView.reloadData()
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
